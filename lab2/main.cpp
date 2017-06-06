@@ -2,7 +2,7 @@
 #include "complex.h"
 #include <cassert>
 using namespace std;
-
+using namespace complex_k;
 int main(){
 
 complex a (2.0,8.0);
@@ -35,7 +35,7 @@ assert (a12.getA()==(3.0/2.0));
 assert (a12.getB()==(2.0/1.0));
 
 complex a13(3.0,2.0);
-double result = a13.conjugate(a13);
+double result = a13.conjugate();
 assert(result==-2.0);
 cout<<"Passed all the tests"<<endl;
 

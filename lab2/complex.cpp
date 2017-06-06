@@ -9,6 +9,7 @@
 #include <iostream>
 
 using namespace std;
+using namespace complex_k;
 //Precondition: a and be must be doubles
 //Postcondition: a represents a real number and b represents an imaginary numbers
 complex::complex(double a,double b){
@@ -44,6 +45,6 @@ return complex(z,x);
 }
 //Precondition: Input must be a complex object
 //Postcondition: Conjugates the complex number in the complex object
-double conjugate(complex const &a){
+double conjugate(complex const& a){
 return ((-1)*a.getB());
 }

@@ -8,7 +8,7 @@
 
 #ifndef COMPLEX_H
 #define COMPLEX_H
-
+namespace complex_k{
 class complex{
 	public:
 		complex(double a=0.0,double b=0.0);
@@ -16,10 +16,13 @@ class complex{
 		//Postcondition: a represents real number and b represents imaginary number
 		double getA() const {return real;}//Postcondition: Return real number
 		double getB() const {return imag;}//Postcondition: returns imaginary number
+		double conjugate(complex const& a);//Postcondition: Conjugate of the complex number
+	
 
 	private:
 		double real;
 		double imag;
+
 
 		
 
@@ -30,5 +33,6 @@ complex operator + (const complex& a, const complex& b);//PostCondition: sum of 
 complex operator - (const complex& a, const complex& b);//PostCondition: difference of complex numbers and real numbers returned separately
 complex operator * (const complex& a, const complex& b);//PostCondition: multiply complex numbers and real numbers returned seperately
 complex operator / (const complex& a, const complex& b);//PostCondition: division of complex numbers and real numbers returned seperately
-double conjugate(complex const& a);//Postcondition: Conjugate of the complex number
+
+}
 #endif

@@ -1,6 +1,6 @@
 //File: complex.cpp
 //Author: Sams Khan
-//Description: class file for complex.h
+//Description: class implementation for complex.h
 
 
 #include "complex.h"
@@ -9,7 +9,7 @@
 #include <iostream>
 
 using namespace std;
-using namespace complex_k;
+namespace complex_k{
 //Precondition: a and be must be doubles
 //Postcondition: a represents a real number and b represents an imaginary numbers
 complex::complex(double a,double b){
@@ -43,8 +43,8 @@ double z=a.getA()/b.getA();
 double x=a.getB()/b.getB();
 return complex(z,x);
 }
-//Precondition: Input must be a complex object
 //Postcondition: Conjugates the complex number in the complex object
-double conjugate(complex const& a){
-return ((-1)*a.getB());
+complex complex::conjugate(){
+return complex((*this).getA(),((-1)*((*this).getB())));
+}
 }

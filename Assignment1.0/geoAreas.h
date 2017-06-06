@@ -7,14 +7,15 @@
 
 #include <iostream>
 #include <cstdlib>
-
+#include <cassert>
 namespace geoareas{
 	//Different areas are calculated in this class
 	class area{
 		public:
 			area(double a);
 			double getside() const{return side;}
-			void setside(double a){side = a;}
+			void setside(double a){assert(a>0);side = a;}//Pre: a can't be negative,
+								     //Post: Sets a to side
 			double equiArea();
 			double squareArea();
 			double regPentArea();

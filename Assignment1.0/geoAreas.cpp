@@ -14,6 +14,7 @@ namespace geoareas{
 //Pre: a cannot be negative
 //Post: Sets the private variable side to the value of a
 	area::area(double a){
+	assert(a>0);
 	side = a;
 
 	}
